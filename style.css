@@ -1,0 +1,129 @@
+.buttons button {
+    width: 140px;
+    height: 20px;
+    padding: 20px;
+    background-color: rgb(79, 77, 77);
+    color: white;
+    margin: 20px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* body{
+    position: relative;
+} */
+
+
+#toast-notification {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+
+
+}
+
+.toast {
+    width: 500px;
+    height: 12vh;
+    /* border: 2px solid red; */
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 20px grey;
+    border-radius: 5px;
+    position: relative;
+    transform: translateX(100%);
+    animation: translate 0.5s linear forwards;
+
+
+}
+
+@keyframes translate {
+    100%{
+        transform: translateX(0%);
+
+    }
+    
+}
+
+.error{
+    color: red;
+     font-weight: bolder;
+
+}
+.invalid{
+    color: rgb(255, 174, 0);
+    font-weight: bolder;
+}
+
+.success{
+    color: green;
+    font-weight: bolder;
+} 
+
+ .toast img{
+    width: 3rem;
+    height: 3rem;
+    /* width: 20px; */
+     margin: 0 5px;
+
+}
+
+.seeker{
+    width: 100%;
+    height: 5px;
+    background-color: green;
+    position: absolute;
+
+}
+
+.toast::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: green;
+    position: absolute;
+    bottom: 0px;
+    animation:anim 5s linear ;
+}
+.toast.error::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    animation:anim 5s linear ;
+}
+.toast.invalid::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0px;
+    animation:anim 5s linear ;
+}
+@keyframes anim{
+    100%{
+        width:0;
+    }
+}
